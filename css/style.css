@@ -60,15 +60,15 @@ p{margin: 0;}
     padding: 0 20px;
 }
 .logo{
-    transform: translate(0,-10px);
+    transform: translate(0,5px);
 }
 
 .logo a {
     text-decoration: none;
     font-family: Logo,monospace;
     color: #f05454;
-    font-size: 88px;
-    font-weight: bold;
+    font-size: 90px;
+    font-weight: lighter;
 }
 
 
@@ -194,7 +194,7 @@ section > h1 > a,section > h1{
 
 @media (max-width: 768px) {
     /* Basic styles for the header */
-    header {
+    header{
         padding: 10px 0;
         position: fixed;
         top: 0;
@@ -239,9 +239,14 @@ section > h1 > a,section > h1{
 
     }
     #home p{
-        font-size: 1vw;
+        font-size: 3vw;
 
     }
+    #home h1{
+        font-size: 15vh;
+    }
+
+
 }
 
 @keyframes slide-up {
@@ -353,7 +358,34 @@ footer {
     height: 200px;
 
 }
+.container {
+    display: flex;
+    justify-content: center;
+}
+.container form{
+    width: 100%;
+}
 
+.container form input, .container form textarea{
+    align-self: center;
+    font-size: 2vh;
+    font-family:'pixel_letters',monospace;
+    padding: 10px;
+    color:#d4cba3;
+    width: 95%;
+    resize: none;
+
+    background-color: #161616;
+    border: 2px solid #154440
+}
+.container form textarea{
+
+    height: 50vh;
+}
+.container form label{
+    width: 95%;
+    align-self: center;
+}
 
 
 
