@@ -1,0 +1,165 @@
+@font-face
+{
+    font-family: Logo;
+    src: url("./fonts/crumbled-pixels.regular.ttf")/* IE9 */
+}
+@font-face
+{
+    font-family: title;
+    src: url("./fonts/nihonium113.regular.ttf")/* IE9 */
+}
+@font-face
+{
+    font-family: name;
+    src: url("./fonts/Crackman.otf"),url("./fonts/Crackman Back.otf"),url("./fonts/Crackman Front.otf")/* IE9 */
+}
+body, h1, h2,a {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
+    text-decoration: none;
+}
+body{
+    overflow-y: scroll;
+    position: relative;
+}
+header {
+    background-color: #20615b;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+p{margin: 0;}
+
+.navbar {
+    display: flex;
+    height:40px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: inherit;
+    padding: 0 20px;
+}
+.logo{
+    transform: translate(0,-10px);
+}
+.logo a {
+    text-decoration: none;
+    font-family: Logo,monospace;
+    color: #f05454;
+    font-size: 88px;
+    font-weight: bold;
+}
+
+
+
+.nav-list li {
+    margin: 0 20px;
+    align-self: center;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #dece9c;
+
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Styles for mobile navigation */
+.mobile-menu-button {
+    color: #dece9c;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 32px;
+    cursor: pointer;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-family: 'Orbit', sans-serif;
+}
+
+
+
+@media (max-width: 768px) {
+    /* Basic styles for the header */
+    header {
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-list-items {
+        padding: 7px;
+
+    }
+
+    .nav-list.active {
+        background-color: #20615b;
+        padding: 0;
+        display: flex;
+        animation: slide-down 0.5s;
+
+    }
+
+    /* Show the mobile menu button in mobile mode */
+    .mobile-menu-button {
+        display: block;
+        text-align: right;
+
+    }
+
+    .nav-list.hidden {
+        opacity: 0;
+
+    }
+
+    /* Add fade-out animation for the mobile menu button */
+    .mobile-menu-button.hidden {
+        opacity: 0;
+
+    }
+
+    #home p {
+        font-size: 1vw;
+
+    }
+}
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,359 @@
+/* Reset some default styles */
+@font-face
+{
+    font-family: Logo;
+    src: url("./fonts/crumbled-pixels.regular.ttf");/* IE9 */
+}
+@font-face
+{
+    font-family: title;
+    src: url("./fonts/nihonium113.regular.ttf");/* IE9 */
+}
+@font-face
+{
+    font-family: name;
+    src: url("./fonts/Crackman.otf"),url("./fonts/Crackman Back.otf"),url("./fonts/Crackman Front.otf");/* IE9 */
+}
+@font-face
+{
+    font-family: eight_bit;
+    src: url("./fonts/8_bit_1_6_Regular.ttf");
+}
+@font-face
+{
+    font-family: pixel_letters;
+    src: url("./fonts/Pixel12x10-v1.1.0.ttf");
+}
+@font-face
+{
+    font-family: pixel;
+    src: url("./fonts/Pixel12x10Mono-v1.1.0.ttf");
+}
+
+body, h1, h2,a {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
+    text-decoration: none;
+}
+body{
+    overflow-y: scroll;
+    position: relative;
+}
+/* Basic styles for the header */
+header {
+    background-color: #20615b;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+p{margin: 0;}
+
+.navbar {
+    display: flex;
+    height:40px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: inherit;
+    padding: 0 20px;
+}
+.logo{
+    transform: translate(0,-10px);
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: Logo,monospace;
+    color: #f05454;
+    font-size: 88px;
+    font-weight: bold;
+}
+
+
+
+.nav-list li {
+    margin: 0 20px;
+    align-self: center;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #dece9c;
+
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Styles for mobile navigation */
+.mobile-menu-button {
+    color: #dece9c;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 32px;
+    cursor: pointer;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-family: 'Orbit', sans-serif;
+
+
+
+}
+.body-elements {
+
+    position: relative;
+    z-index: 1;
+}
+section > h1 > a,section > h1{
+    text-align: center;
+    color: #f05454;
+    font-size: 5vw;
+
+    padding: 20px;
+    font-family: title,monospace;
+}
+
+#home p{
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 0.8vw;
+
+}
+#home{
+    height: 95vh;
+    background-color: #161616;
+    padding: 88px 15px 10px;
+    border-top: 20px;
+    color: #F5F5F5;
+
+}
+#home h1{
+    text-align: left;
+    font-size: 10vw;
+    align-self: center;
+    font-family: "title", monospace;
+    color: #f5f5f5;
+}
+
+#about{
+    /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);*/
+    background-color: #20615b;
+    height: 50vh;
+    padding-bottom: 100px;
+    border: 0;
+
+}
+#about p{
+    color: #d6cda4;
+    font-family: "Orbit",monospace;
+    padding: 40px;
+}
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #161616;
+    padding-bottom: 100px;
+
+}
+/* Additional styles for the mobile navigation */
+.body-elements::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52), 0 2px 4px rgba(0, 0, 0, 0.42);
+    mix-blend-mode: multiply;
+    background: #37373b;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Basic styles for the header */
+    header {
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+    }
+    .nav-list-items{
+        padding: 7px;
+
+    }
+
+    .nav-list.active {
+        background-color: #20615b;
+        padding: 0;
+        display: flex;
+        animation: slide-down 0.5s;
+
+    }
+
+    /* Show the mobile menu button in mobile mode */
+    .mobile-menu-button {
+        display: block;
+        text-align: right;
+
+    }
+    .nav-list.hidden {
+        opacity: 0;
+
+    }
+
+    /* Add fade-out animation for the mobile menu button */
+    .mobile-menu-button.hidden {
+        opacity: 0;
+
+    }
+    #home p{
+        font-size: 1vw;
+
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Define a CSS animation */
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+/* Additional styles for the body and portfolio section */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.overlay {
+    text-decoration: none;
+    font-family: "Orbit", monospace;
+    text-align: center;
+    color: #3cb4a6;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-item {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    font-size: 1.3vw;
+    -webkit-transition: font-size 2s;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, border-radius 0.5s ease-out;
+}
+
+.portfolio-item img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 25vh;
+    opacity: 0.4;
+    transition: 0.5s ease-in;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.portfolio-item:hover img {
+    opacity: 1;
+}
+.portfolio-item:hover .overlay {
+    mix-blend-mode: color-dodge;
+}
+
+#contact{
+    background-color: #20615b;
+}
+
+
+
+
+/* Basic footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project-item{
+    margin: 20px;
+}
+.project-item > a > img{
+    height: 200px;
+
+}
+
+
+
+

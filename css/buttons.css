@@ -1,0 +1,49 @@
+@font-face {
+    font-family: bit8;
+    src: url('./fonts/8_bit_1_6_Regular.ttf');
+}
+
+
+/* PIXELATE BUTTON */
+
+.PixellButton{
+    position: absolute;
+    font-family: bit8,monospace;
+    font-size: large;
+    width: 150px;
+    height: 50px;
+    bottom: 30px;
+    background-color: rgb(54, 185, 175);
+
+
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgb(44, 119, 113);
+    border-right: 4px solid #20605b;
+    border-bottom: 6px solid #20605b;
+
+    box-shadow:   -3px 0 0 0 black,
+    3px 0 0 0 black,
+    0 -3px 0 0 black,
+    0 3px 0 0 black;
+}
+
+.PixellButton:hover{
+
+    background-color: rgb(75, 234, 224);
+
+
+
+    border-color: rgb(49, 140, 134);
+
+}
+
+.PixellButton:active{
+    background-color: rgb(54, 184, 175);
+    transform: translateY(3px);
+    width: 148px;
+    border-right: 4px solid #2c7671;
+    border-bottom: 5px solid #194643;
+}
+
+
