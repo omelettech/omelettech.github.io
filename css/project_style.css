@@ -22,6 +22,13 @@ body, h1, h2,a {
 body{
     overflow-y: scroll;
     position: relative;
+    background-color: #161616;
+
+}
+main{
+    background-color: #161616;
+    height: 100vh;
+    transform: translate(0,20px);
 }
 header {
     background-color: #20615b;
@@ -31,7 +38,12 @@ header {
     width: 100%;
     z-index: 100;
 }
-p{margin: 0;}
+p{
+    margin: 10px;
+    color: #d4cba3;
+    font-size: max(1.2vw,20px);
+
+}
 
 .navbar {
     display: flex;
@@ -90,17 +102,41 @@ p{margin: 0;}
     font-family: 'Orbit', sans-serif;
 }
 
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    align-items: center;
 
+}
+.project_image{
+    width: 45vw;
+    max-width: max-content;
+    margin: 10px;
 
+}
+
+.project-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+    font-family: title, sans-serif;
+    color: #d4cba3;
+
+}
+.project-title{
+    font-size: 64px;
+    max-width: inherit;
+}
+#btn-back{
+    left: 50%;
+    transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+}
 @media (max-width: 768px) {
     /* Basic styles for the header */
-    header {
-        padding: 10px 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-    }
+
 
     .nav-list {
         display: none;
@@ -115,7 +151,9 @@ p{margin: 0;}
         padding: 7px;
 
     }
-
+    p{
+        font-size: 2vw;
+    }
     .nav-list.active {
         background-color: #20615b;
         padding: 0;
@@ -142,9 +180,12 @@ p{margin: 0;}
 
     }
 
-    #home p {
-        font-size: 1vw;
-
+    .main-container{
+        flex-direction: column;
+    }
+    .project-container{
+        max-width: inherit;
+        padding: 10px;
     }
 }
 @keyframes slide-up {

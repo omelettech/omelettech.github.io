@@ -30,7 +30,7 @@
     src: url("./fonts/Pixel12x10Mono-v1.1.0.ttf");
 }
 
-body, h1, h2,a {
+body, h1, h2,h3,a {
     margin: 0;
     padding: 0;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
@@ -59,18 +59,19 @@ p{margin: 0;}
     width: inherit;
     padding: 0 20px;
 }
-.logo{
-    transform: translate(0,5px);
-}
+
 
 .logo a {
     text-decoration: none;
     font-family: Logo,monospace;
     color: #f05454;
     font-size: 90px;
-    font-weight: lighter;
 }
+.logo{
+    transform: translate(0,5px);
 
+
+}
 
 
 .nav-list li {
@@ -119,7 +120,7 @@ p{margin: 0;}
 section > h1 > a,section > h1{
     text-align: center;
     color: #f05454;
-    font-size: 5vw;
+    font-size: max(5vw,64px);
 
     padding: 20px;
     font-family: title,monospace;
@@ -149,7 +150,7 @@ section > h1 > a,section > h1{
 #about{
     /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);*/
     background-color: #20615b;
-    height: 50vh;
+    height: 75vh;
     padding-bottom: 100px;
     border: 0;
 
@@ -157,7 +158,18 @@ section > h1 > a,section > h1{
 #about p{
     color: #d6cda4;
     font-family: "Orbit",monospace;
-    padding: 40px;
+    padding: 5px 40px 15px;
+    font-size: max(1.3vw,16px);
+    font-weight: lighter;
+}
+#about h3{
+    color: #d4cba3;
+    font-family: "Orbit",monospace;
+    padding: 0 40px 0;
+    font-weight: bold;
+    text-decoration: underline;
+   font-size: max(1.4vw,18px);
+
 }
 #portfolio{
     display: flex;
@@ -213,7 +225,9 @@ section > h1 > a,section > h1{
         padding: 7px;
 
     }
-
+    .proj-name{
+        font-size: 5vw;
+    }
     .nav-list.active {
         background-color: #20615b;
         padding: 0;
@@ -244,6 +258,9 @@ section > h1 > a,section > h1{
     }
     #home h1{
         font-size: 15vh;
+    }
+    section > h1 > a,section > h1{
+        font-size: 10vw;
     }
 
 
@@ -322,6 +339,7 @@ section > h1 > a,section > h1{
     opacity: 1;
     border-radius: 1px;
     cursor: pointer;
+
 }
 
 .portfolio-item:hover img {
@@ -389,3 +407,8 @@ footer {
 
 
 
+@-moz-document url-prefix() {
+    .logo{
+        transform: translate(0,-10px);
+    }
+}

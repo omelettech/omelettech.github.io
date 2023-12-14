@@ -21,9 +21,9 @@
           /* Make an HTTP request using the attribute value as the file name: */
           xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            if (this.readyState === 4) {
+              if (this.status === 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status === 404) {elmnt.innerHTML = "Page not found.";}
               /* Remove the attribute, and call this function once more: */
               elmnt.removeAttribute("w3-include-html");
               includeHTML();
@@ -51,7 +51,7 @@
       <ul class="nav-list">
         <li class="nav-list-items"><a href="#home">Home</a></li>
         <li class="nav-list-items"><a href="#about">About</a></li>
-        <li class="nav-list-items"><a href="./projects/index.php">Portfolio</a></li>
+        <li class="nav-list-items"><a href="./projects/">Portfolio</a></li>
         <li class="nav-list-items"><a href="#contact">Contact</a></li>
       </ul>
 
@@ -70,8 +70,8 @@
     <br>
     <p>C:\Users\ThisPc>python3 introduction.py</p>
     <br>
-    <h1>Hi, <span style="font-family: 'logo', sans-serif; font-weight: lighter">Awsaf</span> here,</h1>
-    <h2 style="font-size: 48px;opacity: 50%;font-family: 'title', sans-serif;">Programming student</h2>
+    <h1>Hi, <span style="font-family: 'logo', sans-serif; font-weight: normal">Awsaf</span> here,</h1>
+    <h2 style="font-size: 48px;opacity: 50%;font-family: 'title', sans-serif;font-weight: lighter">Programming student</h2>
     <h2 style="font-size: 30px;color: #f5f5f5">><span class="blink" style='font-family: "Orbit", monospace'>_</span></h2>
 
 
@@ -80,20 +80,20 @@
 
 
   <section id="about" class="body-elements">
-    <h1><a href="projects/index.php">About</a></h1>
+    <h1><a href="#about">About</a></h1>
     <div w3-include-html="about.html"></div>
   </section>
 
   <section id="portfolio" class="body-elements">
-    <h1><a href="projects/index.php">Portfolio</a></h1>
+    <h1><a href="projects/index.html">Portfolio</a></h1>
     <div class="portfolio-grid">
       <!-- Portfolio items with images and links go here -->
       <div class="portfolio-item">
 
-        <a href="./projects/project_template/project1.html">
-          <img src="/img/Untitled-1.jpg" alt="Project 1">
+        <a href="./projects/tank_top.html">
+          <img src="/img/tank_top.jpg" alt="image of a tank game created with pygame">
           <div class="overlay">
-            <h2 class="proj-name">Project 1</h2>
+            <h2 class="proj-name">Tank top</h2>
           </div>
         </a>
 
@@ -114,7 +114,7 @@
       <div class="portfolio-item">
         <a href="./projects/project_template/project1.html">
 
-          <img src="./img/aceofspades2.jpg" alt="Project 1">
+          <img src="/img/aceofspades2.jpg" alt="Project 1">
           <div class="overlay">
             <h2 class="proj-name">Project 3</h2>
           </div>
@@ -131,7 +131,7 @@
   </section>
 
   <section id="contact" class="body-elements">
-    <h1><a href="projects/index.php">Contact</a></h1>
+    <h1><a href="projects/index.html">Contact</a></h1>
     <!-- Your content for the Contact section goes here -->
     <div class="container">
       <form id="contact-form" action="https://formspree.io/f/mleyyako" method="POST" style="
@@ -166,7 +166,6 @@
 <footer>
   <p>&copy; 2023 Awsaf Fida Mahmud</p>
 </footer>
-
 <script src="./js/javascript.js"></script>
 
 <script>
