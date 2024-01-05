@@ -13,7 +13,7 @@
     font-family: name;
     src: url("./fonts/Crackman.otf"),url("./fonts/Crackman Back.otf"),url("./fonts/Crackman Front.otf")/* IE9 */
 }
-body, h1, h2,a {
+body, h1, h2,h3,a {
     margin: 0;
     padding: 0;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.38);
@@ -38,10 +38,11 @@ header {
     width: 100%;
     z-index: 100;
 }
-p{
+p,pre{
     margin: 10px;
     color: #d4cba3;
     font-size: max(1.2vw,20px);
+    font-family: sans-serif;
 
 }
 
@@ -130,9 +131,87 @@ p{
     max-width: inherit;
 }
 #btn-back{
+    position: relative;
+    bottom: 0;
+
+}
+.overlay {
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: "Orbit", monospace;
+    text-align: center;
+    color: #3cb4a6;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.language{
+    text-decoration: none;
+    font-size: 0.6rem;
+    font-family: "Orbit", monospace;
+    padding: 5px;
+    color: rgba(58, 238, 216, 0.5);
+    background-color: rgba(240, 84, 84, 0.5);
+    border-radius: 15px;
+    position: absolute;
+    opacity: 1;
+    display: inline-block;
+    line-height: normal;
+    bottom: 0;
+    transform: translate(-20%, -50%);
+
+    right: 0;
+
+}
+.btn-back{
+    position: relative;
     left: 50%;
     transform: translate(-50%,0);
     -ms-transform: translate(-50%,0);
+}
+.project-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translate(0,100px);
+}
+.project-item {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    font-size: 1.3vw;
+    -webkit-transition: font-size 2s;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, border-radius 0.5s ease-out;
+}
+
+.project-item img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 25vh;
+    opacity: 0.4;
+    transition: 0.5s ease-in;
+}
+
+.project-item:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    border-radius: 1px;
+    cursor: pointer;
+
+}
+
+.project-item:hover img {
+    opacity: 1;
+}
+.project-item:hover .overlay {
+    mix-blend-mode: color-dodge;
+}
+.project-item:hover .language {
+    background-color: #f05454;
+    color: #3cb4a6;
 }
 @media (max-width: 768px) {
     /* Basic styles for the header */
@@ -187,6 +266,14 @@ p{
         max-width: inherit;
         padding: 10px;
     }
+    .overlay{
+        font-size: 0.9rem;
+    }
+}
+.project-blog > h3{
+    color: #cb813d;
+    font-family:"bit8",sans-serif;
+    font-size: 28px;
 }
 @keyframes slide-up {
     0% {
