@@ -66,6 +66,7 @@ p{margin: 0;}
     font-family: Logo,monospace;
     color: #f05454;
     font-size: 90px;
+    font-weight: lighter;
 }
 .logo{
     transform: translate(0,5px);
