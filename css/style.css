@@ -180,6 +180,86 @@ section > h1 > a,section > h1{
     padding-bottom: 100px;
 
 }
+
+#skills{
+    background-color: #20615b;
+   padding-left: 20px;
+    padding-right: 20px;
+
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.skill {
+    width: calc(20% - 20px);
+    margin: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(27, 28, 27, 0.71);
+}
+
+.skill-name {
+    font-size: 2vh;
+    text-align: center;
+    font-family: pixel,monospace;
+    color: #d6cda4;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #161616;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+}
+
+.progress {
+    display: inline-block;
+
+    height: 100%;
+    background-color: rgb(240, 84, 84);
+    border-radius: 5px;
+    animation: loading 2s infinite;
+}
+
+.languages-container {
+    display: flex;
+    justify-content: start;
+}
+
+.language-icon {
+    font-size: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #d6cda4; /* Change the color as needed */
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.language-icon:hover .tooltip {
+    opacity: 1;
+}
+
 /* Additional styles for the mobile navigation */
 .body-elements::after {
     content: '';
@@ -263,8 +343,17 @@ section > h1 > a,section > h1{
     section > h1 > a,section > h1{
         font-size: 10vw;
     }
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
+    }
+    .skill {
+        width: 80vw;
 
+    }
 }
 
 @keyframes slide-up {
@@ -351,9 +440,20 @@ section > h1 > a,section > h1{
 }
 
 #contact{
-    background-color: #20615b;
+    background-color: #161616;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.social-icons a {
+    margin: 0 2vw;
+    color: rgba(58, 238, 216, 0.5); /* Change the color as needed */
+    text-decoration: none;
+    font-size: 32px;
+}
 
 
 
@@ -394,8 +494,8 @@ footer {
     width: 95%;
     resize: none;
 
-    background-color: #161616;
-    border: 2px solid #154440
+    background-color: #1f312f;
+    border: 2px solid #3cb4a6
 }
 .container form textarea{
 

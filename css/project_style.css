@@ -21,8 +21,9 @@ body, h1, h2,h3,a {
 }
 body{
     overflow-y: scroll;
-    position: relative;
+    overflow-x: hidden;
     background-color: #161616;
+    height: 100vh;
 
 }
 main{
@@ -171,6 +172,12 @@ p,pre{
     left: 50%;
     transform: translate(-50%,0);
     -ms-transform: translate(-50%,0);
+}
+.btn-home{
+    position: relative;
+    transform: translate(50%,20vh) translate(-75px,0);
+    z-index: 2;
+
 }
 .project-box{
     display: flex;
