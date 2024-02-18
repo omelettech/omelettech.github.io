@@ -37,7 +37,9 @@ body, h1, h2,h3,a {
     text-decoration: none;
 }
 body{
+
     overflow-y: scroll;
+    overflow-x: clip;
     position: relative;
 }
 /* Basic styles for the header */
@@ -129,20 +131,22 @@ section > h1 > a,section > h1{
 
 #home p{
     font-family: "Ubuntu Mono", monospace;
-    font-size: 0.8vw;
+    font-size: 0.9vw;
 
 }
 #home{
-    height: 95vh;
+    height: 90vh;
     background-color: #161616;
-    padding: 88px 15px 10px;
+    padding: 60px 15px 10px;
     border-top: 20px;
     color: #F5F5F5;
 
 }
 #home h1{
     text-align: left;
-    font-size: 10vw;
+    font-size: max(72px,7vw);
+    padding-top: 0;
+    padding-bottom: 0;
     align-self: center;
     font-family: "title", monospace;
     color: #f5f5f5;
@@ -160,7 +164,7 @@ section > h1 > a,section > h1{
     color: #d6cda4;
     font-family: "Orbit",monospace;
     padding: 5px 40px 15px;
-    font-size: max(1.3vw,16px);
+    font-size: max(1.3vw,15px);
     font-weight: lighter;
 }
 #about h3{
@@ -231,10 +235,74 @@ section > h1 > a,section > h1{
 
 .languages-container {
     display: flex;
-    justify-content: start;
+    justify-content: center;
+}
+#commandHistory>div>a{
+    text-decoration: none;
+    color: #db3434;
+}
+#commandHistory {
+    font-family: "Ubuntu Mono",monospace;
+    padding-left: 10px;
+    padding-top: 20px;
+    font-size:max(13px,1vw) ;
+    width: 100%;
+    max-height: 85vh;
+    color: #ffffff;
+    background-color: #161616;
+    position: relative;
+    overflow-y: auto;
+
+}
+#commandHistory> section>p{
+    font-size:max(14px,1vw) ;
+    height: auto;
+}
+#commandHistory> section{
+    font-size: max(20px,2vw);
+    height: auto;
+}
+#console-main{
+    height: 100vh;
+}
+#consoleContainer {
+    width: 100%;
+    font-size:max(14px,1vw) ;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #161616;
+    color: #ffffff;
+}
+#consoleLabel {
+    font-family: "Ubuntu Mono",monospace;
+    color: #ffffff;
+    white-space: nowrap;
+    padding-right: 2px;
+}
+#console {
+    width: 100%;
+    font-size:max(13px,1vw) ;
+
+    font-family: "Ubuntu Mono",monospace;
+    background-color: #161616;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    outline: none;
+    border: none;
+
 }
 
+#console:focus {
+    outline: none;
+}
 .language-icon {
+    position: relative;
+
     font-size: 32px;
     margin-left: 5px;
     margin-right: 5px;
@@ -244,12 +312,13 @@ section > h1 > a,section > h1{
 
 .tooltip {
     position: absolute;
+    font-size: 16px;
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
     padding: 8px;
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(22, 22, 22);
+    color: rgba(58, 238, 216, 0.5);
     border-radius: 4px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -287,6 +356,14 @@ section > h1 > a,section > h1{
 
 @media (max-width: 768px) {
     /* Basic styles for the header */
+    #consoleContainer, #commandHistory,#consoleContainer>input{
+        font-size: 14px;
+    }
+    #commandHistory> section>h2{
+        font-size: 30px;
+        height: auto;
+    }
+
     header{
         padding: 10px 0;
         position: fixed;
@@ -303,7 +380,7 @@ section > h1 > a,section > h1{
         width: 100%;
     }
     .nav-list-items{
-        padding: 7px;
+        padding: 0.5em;
 
     }
     .proj-name{
@@ -334,14 +411,15 @@ section > h1 > a,section > h1{
 
     }
     #home p{
-        font-size: 3vw;
+        font-size: 15px;
 
     }
     #home h1{
-        font-size: 15vh;
+        font-size: 15vw;
+        line-height: 0.6em;
     }
     section > h1 > a,section > h1{
-        font-size: 10vw;
+        font-size: 2.2em;
     }
     .skills-container {
         display: flex;
@@ -450,9 +528,10 @@ section > h1 > a,section > h1{
 
 .social-icons a {
     margin: 0 2vw;
-    color: rgba(58, 238, 216, 0.5); /* Change the color as needed */
+    color: rgb(58, 238, 216); /* Change the color as needed */
     text-decoration: none;
     font-size: 32px;
+    filter: drop-shadow(0 0 3px rgba(0, 255, 226, 0.5));
 }
 
 
