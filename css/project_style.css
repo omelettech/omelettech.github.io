@@ -119,12 +119,12 @@ p,pre{
 }
 
 .project-container{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    max-width: 30vw;
-    font-family: title, sans-serif;
-    color: #d4cba3;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        max-width: 30vw;
+        font-family: title, sans-serif;
+        color: #d4cba3;
 
 }
 .project-title{
