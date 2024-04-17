@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathlette.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Pixelify+Sans&family=Press+Start+2P&family=Rubik+Mono+One&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/project_style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="../#">AFM</a></div>
+
+
+            <ul class="nav-list">
+                <li class="nav-list-items"><a href="../#">Home</a></li>
+                <li class="nav-list-items"><a href="../#about">About</a></li>
+                <li class="nav-list-items"><a href="../projects">Portfolio</a></li>
+                <li class="nav-list-items"><a href="../#contact">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-button">
+                <i class="fas fa-bars toggle-button"></i>
+            </div>
+
+        </div>
+    </nav>
+
+
+</header>
+
+<main>
+    <div class="main-container">
+
+        <img class="project_image" src="../img/mathlette.gif" alt="Blog Header Image">
+        <div class="project-container">
+            <h1 class="project-title">Math graphing calculator</h1>
+            <h2 class="project-desc">Javascript</h2>
+            <h3 style="color: #cb813d; font-size: 28px;font-weight: lighter">
+                A javascript app that lets user draw graphs in the cartesian plane
+            </h3>
+        </div>
+
+        <div class="project-blog">
+            <p>This program is still work in progress, as I have planned on adding advanced functions such as <strong>Derivatives, Integration</strong> etc. Yes currently it is simply
+            a poor man's Desmos</p>
+            <h3>Purpose</h3>
+            <p>Main purpose for this design was for user to visualise calculus concepts and possibly other math concepts, while keeping the UI clean and simple.
+            Currently. we can click ON the graph to get the tangent line of the curve ON that point.</p>
+            <h3>Conceptual design</h3>
+            <p>
+                Firstly the input box that recieves user input was heavily validated. making sure it can take as much hit as possible, it is not NEARLY perfect however it still
+                can handle with the user being slightly genorous. Secondly, converting that string into an equation is easier said than done.<br>
+                I first needed to remove all the redundant spaces and capitalizing, then converted all the operations (+,-,^) into characters that the Math module can handle and displayed the returned
+                results into a script, which takes in all the points and draws the curve for us.
+
+
+            </p>
+            <h3>Goals:</h3>
+            <p>Adding extra functionalities, displaying results, adding matrices and more.</p>
+
+
+
+
+
+        </div>
+
+        <div class="btn-back"><button id="btn-back" type="button" class="PixellButton" onclick="window.location.href='../projects'">Go Back</button></div>
+
+    </div>
+
+
+
+</main>
+<footer>
+    <!-- Footer can be added here -->
+</footer>
+
+</body>
+
+</html>
