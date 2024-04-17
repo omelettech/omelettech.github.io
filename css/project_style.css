@@ -201,6 +201,19 @@ p,pre{
     opacity: 0.4;
     transition: 0.5s ease-in;
 }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 2vw;
+    color: rgb(58, 238, 216); /* Change the color as needed */
+    text-decoration: none;
+    font-size: 32px;
+    filter: drop-shadow(0 0 3px rgba(0, 255, 226, 0.5));
+}
 
 .project-item:hover {
     transform: scale(1.2);
