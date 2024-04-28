@@ -1,0 +1,19 @@
+name: Generate API Key JavaScript
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-api-key-js:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set API Key in JavaScript
+        run: |
+          echo "const API_KEY = '${{ secrets.API_KEY }}';" > js/api-key.js
+        working-directory: ${{ github.workspace }}
