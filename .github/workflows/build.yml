@@ -1,4 +1,4 @@
-name: Generate API Key JavaScript
+name: Replace API Key
 
 on:
   push:
@@ -6,14 +6,24 @@ on:
       - main
 
 jobs:
-  generate-api-key-js:
+  replace-api-key:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set API Key in JavaScript
+      - name: Read API Key from Secret
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+
+      - name: Replace API Key in HTML
+        run: sed -i "s/YOUR_GITHUB_API_KEY/${{ secrets.API_KEY }}/g" js/commit_act.js
+
+
+      - name: Commit and Push Changes
         run: |
-          echo "const API_KEY = '${{ secrets.API_KEY }}';" > js/api-key.js
-        working-directory: ${{ github.workspace }}
+          git config --global user.name "Awsaf Fida Mahmud"
+          git config --global user.email "fidaawsaf@gmail.com"
+          git add js/commit_act.js
+          git commit -m "Replace API key"
+          git push
