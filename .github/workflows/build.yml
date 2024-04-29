@@ -1,0 +1,27 @@
+name: Replace API Key
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  replace-api-key:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Read API Key from Secret
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+
+      - name: Replace API Key in HTML
+        run: sed -i "s/YOUR_GITHUB_API_KEY/${{ secrets.API_KEY }}/g" blob/main/js/commit_act.js
+
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "Awsaf Fida Mahmud"
+          git config --global user.email "fidaawsaf@gmail.com"
+          git add js/commit_act.js
+          git commit -m "Replace API key"
+          git push
