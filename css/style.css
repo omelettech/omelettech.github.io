@@ -154,7 +154,7 @@ section > h1 > a,section > h1{
 
 #about{
     /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);*/
-    background-color: #20615b;
+    background-color: #161616;
     height: 75vh;
     padding-bottom: 100px;
     border: 0;
@@ -180,7 +180,7 @@ section > h1 > a,section > h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #161616;
+    background-color: #20615b;
     padding-bottom: 100px;
 
 }
