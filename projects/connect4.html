@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect4.java</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Pixelify+Sans&family=Press+Start+2P&family=Rubik+Mono+One&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/project_style.css">
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="../#">AFM</a></div>
+
+
+            <ul class="nav-list">
+                <li class="nav-list-items"><a href="../#">Home</a></li>
+                <li class="nav-list-items"><a href="../#about">About</a></li>
+                <li class="nav-list-items"><a href="../projects">Portfolio</a></li>
+                <li class="nav-list-items"><a href="../#contact">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-button">
+                <i class="fas fa-bars toggle-button"></i>
+            </div>
+
+        </div>
+    </nav>
+
+
+</header>
+
+<main>
+    <div class="main-container">
+
+        <img class="project_image" src="../img/connect4.gif" alt="Blog Header Image">
+        <div class="project-container">
+            <h1 class="project-title">Min-Max Connect 4</h1>
+            <h2 class="project-desc">Java</h2>
+            <h3 style="color: #cb813d; font-size: 28px;font-weight: lighter">
+                A Collaborative console game project with MinMax algorithm player and depth control.
+            </h3>
+        </div>
+
+        <div class="project-blog">
+            <p>This project is a console-based implementation of the classic game Connect 4, enhanced with an AI opponent powered by the MinMax algorithm with depth control.</p>
+            <h3>Purpose</h3>
+            <p>The primary objective of this project is to create an engaging and challenging Connect 4 game that allows players to compete against each other or against an AI opponent.
+                By implementing the MinMax algorithm with depth control, we aim to provide players with a formidable opponent that adapts to their skill level.</p>
+            <h3>Conceptual Design</h3>
+            <p>The game logic is implemented using Java, with a focus on functionality and learning to optimize algorithms.The Min max works surprisingly well even at depth 8.
+                The console interface provides a simple and intuitive user experience and let us focus on the academics instead of aesthetics,
+                allowing players to make moves by selecting column numbers. The MinMax algorithm evaluates potential moves based on the current game state and selects the optimal move to maximize its chances of winning or preventing the opponent from winning.</p>
+            <h3>Features Implemented</h3>
+            <ul>
+                <li><strong>Connect 4 Gameplay:</strong> The game follows the standard rules of Connect 4, where players take turns dropping colored discs into a grid with the goal of forming a line of four discs vertically, horizontally, or diagonally.</li>
+                <li><strong>AI Opponent:</strong> The AI opponent uses the MinMax algorithm with depth control to determine its moves. The depth parameter allows players to adjust the AI's difficulty level, with higher depths resulting in more strategic and challenging gameplay.</li>
+                <li><strong>User Interface:</strong> The console interface provides clear prompts and instructions for players to navigate the game. Visual cues, such as colored discs and grid lines, enhance the gaming experience and aid in decision-making.</li>
+                <li><strong>Win Detection:</strong> The game automatically detects winning moves and announces the winner once a player achieves four in a row. It also handles tie scenarios when the grid is full without a winner.</li>
+            </ul>
+            <h3>Challenges Faced</h3>
+            <p>One of the main challenges encountered during development was fine-tuning the MinMax algorithm to balance between performance and accuracy.
+                Adjusting the depth parameter required thorough testing to ensure that the AI's decisions were optimal without causing excessive computation time. Another challenge was testing, all of us gave a handful
+            of our time to thoroughly test the program with unimaginable edge cases, I truly am proud of all of us</p>
+            <h3>Future Enhancements</h3>
+            <p>Currently, I call it a finished program, as it can handle almost anything thrown at it (bad inputs). However a GUI version would be amazing in my opinion</p>
+
+            <h3>Conclusion</h3>
+            <p>In conclusion, the Connect 4 game with MinMax algorithm and depth control represents a successful collaboration between our team members to create an entertaining and intellectually stimulating gaming experience. With ongoing development and enhancements, we look forward to delivering even more exciting features and improvements.</p>
+        </div>
+
+
+        <div class="btn-back"><button id="btn-back" type="button" class="PixellButton" onclick="window.location.href='../projects'">Go Back</button></div>
+
+    </div>
+
+
+
+</main>
+<footer>
+    <!-- Footer can be added here -->
+</footer>
+
+</body>
+
+</html>

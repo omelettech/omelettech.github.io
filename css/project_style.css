@@ -39,7 +39,7 @@ header {
     width: 100%;
     z-index: 100;
 }
-p,pre{
+p,pre,.main-container ul{
     margin: 10px;
     color: #d4cba3;
     font-size: max(1.2vw,20px);
