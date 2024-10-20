@@ -227,11 +227,12 @@ p,pre,.main-container ul{
     opacity: 1;
 }
 .project-item:hover .overlay {
-    mix-blend-mode: color-dodge;
+    font-size: 1rem;
+    transition: all 0.15s ease;
 }
 .project-item:hover .language {
-    background-color: #f05454;
-    color: #3cb4a6;
+    background-color: rgba(240, 84, 84, 0.53);
+    color: #4affea;
 }
 @media (max-width: 768px) {
     /* Basic styles for the header */
